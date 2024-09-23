@@ -1,6 +1,6 @@
 # IAW2425
 ### Cosas que vamos a aprender este (medio) curso
-Cosas:
+**Cosas**:
 - PhP
 - Java
 - MySQL
