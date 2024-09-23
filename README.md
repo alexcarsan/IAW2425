@@ -4,6 +4,7 @@
 - PhP
 - Java
 - MySQL
+
 Cosas que voy a *experimentar* este curso:
 1. Ansiedad
 2. Más ansiedad
