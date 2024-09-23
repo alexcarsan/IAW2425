@@ -10,4 +10,4 @@ Cosas que voy a *experimentar* este curso:
 2. Más ansiedad
 3. ***Diarrea***
 
-![south park poop](https://github.com/alexcarsan/IAW2425)
+![south park poop](https://media.tenor.com/pINnQJUOZLUAAAAM/howdy-ho-folks-mr-hankey.gif)
