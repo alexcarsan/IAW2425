@@ -8,7 +8,8 @@
 
         .contenedor {
             display: flex;
-
+            justify-content: center;
+            margin-top: 20px;
         }
 
         .botonera {
@@ -17,11 +18,12 @@
             margin: 10px;
         }
 
-        div {
-            width: 300px;
-            height: 300px;
+        .circulo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 10px;
         }
-
         .rojo {
             background-color: red;
         }
@@ -39,26 +41,34 @@
         }
 
         button{
-
+            padding: 10px;
         }
 
-
     </style>
+
+    <script>
+        function ocultarCirculo(color) {
+            const circulo = document.querySelector(`.${color}`);
+            if (circulo) {
+                circulo.style.display = 'none'; // Oculta el círculo
+            }
+        }
+    </script>
 
 </head>
 
 <body>
     
     <div class="contenedor">
-        <div class="roja"></div>
-        <div class="verde"></div>
-        <div class="azul"></div>
+        <div class="circulo rojo"></div>
+        <div class="circulo verde"></div>
+        <div class="circulo azul"></div>
     </div>
 
     <div class="contenedor">
-        <button onclick="">Ocultar</button>
-        <button onclick="">Ocultar</button>
-        <button onclick="">Ocultar</button>
+        <button onclick="ocultarCirculo('rojo')">Ocultar rojo</button>
+        <button onclick="ocultarCirculo('verde')">Ocultar verde</button>
+        <button onclick="ocultarCirculo('azul')">Ocultar azul</button>
     </div>
 
 </body>
