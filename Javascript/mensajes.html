@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mensajes Redes Sociales</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
+        
         #mensajes {
             margin-top: 20px;
         }
@@ -15,7 +13,7 @@
             display: flex;
             align-items: center;
             padding: 5px;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid grey;
         }
         .mensaje p {
             flex: 1;
@@ -27,6 +25,12 @@
             font-weight: bold;
             margin-left: 10px;
         }
+
+        .borrar img {
+            width: 20px;
+            height: auto;
+        }
+
     </style>
 </head>
 
@@ -43,7 +47,7 @@
         let mensajes = [];
 
         function anadirMensaje() {
-            const mensajeTexto = document.getElementById("mensaje").value;
+            let mensajeTexto = document.getElementById("mensaje").value;
             
             if (mensajeTexto !== "") {
                 mensajes.push(mensajeTexto);
@@ -53,25 +57,29 @@
         }
 
         function mostrarMensajes() {
-            const contenedor = document.getElementById("mensajes");
+            let contenedor = document.getElementById("mensajes");
+
             contenedor.innerHTML = "";
 
-            mensajes.forEach((mensaje, index) => {
-                const mensajeElemento = document.createElement("div");
+            for (let i = 0; i < mensajes.length; i++) {
+                let mensajeElemento = document.createElement("div");
                 mensajeElemento.classList.add("mensaje");
 
-                const textoMensaje = document.createElement("p");
-                textoMensaje.innerText = mensaje;
+                let textoMensaje = document.createElement("p");
+                textoMensaje.innerText = mensajes[i];
                 mensajeElemento.appendChild(textoMensaje);
 
-                const iconoBorrar = document.createElement("span");
-                iconoBorrar.innerText = "🗑️";
+                let iconoBorrar = document.createElement("span");
+                iconoBorrar.innerText = "";
                 iconoBorrar.classList.add("borrar");
-                iconoBorrar.onclick = () => borrarMensaje(index);
-                mensajeElemento.appendChild(iconoBorrar);
+                iconoBorrar.onclick = function() { borrarMensaje(i); };
 
+                let imagenBorrar = document.createElement("img");
+                imagenBorrar.src = "papelera.png";
+                iconoBorrar.appendChild(imagenBorrar);
+                mensajeElemento.appendChild(iconoBorrar);
                 contenedor.appendChild(mensajeElemento);
-            });
+            }
         }
 
         function borrarMensaje(indice) {
@@ -83,7 +91,6 @@
             mensajes.sort();
             mostrarMensajes();
         }
-
     </script>
 
 </body>
