@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensajes Redes Sociales</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #mensajes {
+            margin-top: 20px;
+        }
+        .mensaje {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+        .mensaje p {
+            flex: 1;
+            margin: 0;
+        }
+        .borrar {
+            cursor: pointer;
+            color: red;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Twitter</h1>
+    <input id="mensaje" type="text" placeholder="Escribe tu mensaje aquí">
+    <button onclick="anadirMensaje()">Enviar</button>
+    <button onclick="ordenarMensajes()">Ordenar alfabéticamente</button>
+
+    <div id="mensajes"></div>
+
+    <script>
+        let mensajes = [];
+
+        function anadirMensaje() {
+            const mensajeTexto = document.getElementById("mensaje").value;
+            
+            if (mensajeTexto !== "") {
+                mensajes.push(mensajeTexto);
+                document.getElementById("mensaje").value = "";
+                mostrarMensajes();
+            }
+        }
+
+        function mostrarMensajes() {
+            const contenedor = document.getElementById("mensajes");
+            contenedor.innerHTML = "";
+
+            mensajes.forEach((mensaje, index) => {
+                const mensajeElemento = document.createElement("div");
+                mensajeElemento.classList.add("mensaje");
+
+                const textoMensaje = document.createElement("p");
+                textoMensaje.innerText = mensaje;
+                mensajeElemento.appendChild(textoMensaje);
+
+                const iconoBorrar = document.createElement("span");
+                iconoBorrar.innerText = "🗑️";
+                iconoBorrar.classList.add("borrar");
+                iconoBorrar.onclick = () => borrarMensaje(index);
+                mensajeElemento.appendChild(iconoBorrar);
+
+                contenedor.appendChild(mensajeElemento);
+            });
+        }
+
+        function borrarMensaje(indice) {
+            mensajes.splice(indice, 1);
+            mostrarMensajes();
+        }
+
+        function ordenarMensajes() {
+            mensajes.sort();
+            mostrarMensajes();
+        }
+
+    </script>
+
+</body>
+</html>
