@@ -5,7 +5,7 @@
         "southPark/2.jpg",
         "southPark/3.jpg",
         "southPark/4.jpg",
-        "southPark/5.jpg",
+        "southPark/5.jpeg",
     ];
 
     $random = $imagenes[rand(0,4)]; //Creo una variable que elige una posición aleatoria del array creado

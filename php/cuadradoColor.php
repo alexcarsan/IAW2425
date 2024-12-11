@@ -13,9 +13,9 @@
     <style>
 
         #cuadrado {
-            width: 300px; /*Le pongo 300px de alto*/
-            height: 300px; /*Le pongo 300px de ancho*/
-            background-color: <?php echo $color; ?>; /*Hago que como color de fondo urilice la variable que he creado con PHP*/
+            width: 300px; /*Le pongo 300px de ancho*/
+            height: 300px; /*Le pongo 300px de alto*/
+            background-color: <?php echo $color; ?>; /*Hago que como color de fondo utilice la variable que he creado con PHP*/
         }
 
     </style>
