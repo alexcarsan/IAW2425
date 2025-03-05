@@ -211,7 +211,7 @@ INSERT INTO `usuarios` (`id`, `nombre_usuario`, `contrasena`, `rol`, `email`) VA
 (1, 'joseluisnunez', '$2y$10$X5f4Kfy2.Ph3vIa0Mhxjl.DTBEULitb9x4bxA6.5oO013FhMLtUKq', 'ad', 'joseluisnunez@iesamachado.org'),
 (2, 'vicedirector', '$2y$10$X5f4Kfy2.Ph3vIa0Mhxjl.DTBEULitb9x4bxA6.5oO013FhMLtUKq', 'ad', 'vicedirector@iesamachado.org'),
 (3, 'extraescolares', '$2y$10$X5f4Kfy2.Ph3vIa0Mhxjl.DTBEULitb9x4bxA6.5oO013FhMLtUKq', 'ad', 'extraescolares@iesamachado.org'),
-(5, 'alex', '$2y$10$ViL/cA2eHHxPpwqqXR.7iuRIw3soJ5bcmXI7ygIdkYwkWZQ0RaY5W', 'ad', 'alexcarrero05@iesamachado.org'),
+(5, 'alex', '$2y$10$I/WMqjvZccIULKh4q.CDlu5D2EqdCR7GL/zMEqLDUfpjq.8lOQwYG', 'ad', 'alexcarrero05@iesamachado.org'),
 (11, 'nombre', '$2y$10$z4FwAilU0z0VGv9RmbnQi.MQtQ63Ak.AVGp7aH7FLWm/SlPzZKc62', 'us', 'nombre@iesamachado.org'),
 (10, 'indiana', '$2y$10$eQM2aeRcHGYtaP7aC3fcsObvch64WUAU1rjNYOtgEbZVSvnpoAPvi', 'ad', 'indianajones@iesamachado.org');
 
